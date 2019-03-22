@@ -8,8 +8,18 @@ namespace Project_Euler
 {
     class Program
     {
-        static void Main(string[] args)
+        public void Main(string[] args)
         {
+            Console.WriteLine("Project Euler:");
+            Sum_3_or_5.Answer();
+
+
+            Console.ReadKey();
         }
+
+
+       
     }
+
+    
 }
