@@ -11,10 +11,23 @@ namespace Project_Euler
         public void Main(string[] args)
         {
             Console.WriteLine("Project Euler:");
-            Sum_3_or_5.Answer();
+
+            string selection = Console.ReadLine();
+            switch(selection)
+            {
+                case "1 The sum of all numbers less than 1000 that are multiples of 3 or 5":
+                    Sum_3_or_5.Answer();
+                    break;
 
 
-            Console.ReadKey();
+                default:
+                    Console.WriteLine("You enter uknown command");
+                    break;
+
+            }
+
+
+            
         }
 
 
