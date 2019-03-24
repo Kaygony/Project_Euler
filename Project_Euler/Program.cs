@@ -8,14 +8,17 @@ namespace Project_Euler
 {
     class Program
     {
-        public void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("Project Euler:");
+            Console.WriteLine("1. The sum of all numbers less than 1000 that are multiples of 3 or 5");
+            Console.WriteLine("2. ");
+
 
             string selection = Console.ReadLine();
             switch(selection)
             {
-                case "1 The sum of all numbers less than 1000 that are multiples of 3 or 5":
+                case "1":
                     Sum_3_or_5.Answer();
                     break;
 
@@ -25,14 +28,9 @@ namespace Project_Euler
                     break;
 
             }
-
-
             
         }
-
-
        
     }
-
-    
+ 
 }
