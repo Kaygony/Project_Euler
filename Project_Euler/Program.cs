@@ -12,7 +12,7 @@ namespace Project_Euler
         {
             Console.WriteLine("Project Euler:");
             Console.WriteLine("1. The sum of all numbers less than 1000 that are multiples of 3 or 5");
-            Console.WriteLine("2. ");
+            Console.WriteLine("2. The sum of all even elements of the Fibonacci series, which do not exceed 4 million ");
 
 
             string selection = Console.ReadLine();

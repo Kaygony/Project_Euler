@@ -10,13 +10,23 @@ namespace Project_Euler
     {
         public static void Answer()
         {
-            Console.WriteLine(" The sum of chet numbers of Phibonachi less than 4000000:");
+            Console.WriteLine(" The sum of all even elements of the Fibonacci series, which do not exceed 4 million:");
 
-            int[] x = new int[10000];
-            Console.WriteLine(x);
+
+            Console.WriteLine("начальный массив");
+            int[] x = new int[100];
+            for(int i=0; i<100; i++)
+            {
+                Console.WriteLine(x[i]);
+            }
+            
 
             Fibonachi(x);
-            Console.WriteLine(x);
+            Console.WriteLine("фибоначи массив");
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(x[i]);
+            }
 
 
             Console.WriteLine("Press 1 to return ");
@@ -44,6 +54,7 @@ namespace Project_Euler
             while (x[i] < 4000000)   
             {
                 x[i + 2] = x[i] + x[i + 1];
+                Console.WriteLine(x[i + 2]);
                 i++;
             }
         }
