@@ -22,6 +22,10 @@ namespace Project_Euler
                     Sum_3_or_5.Answer();
                     break;
 
+                case "2":
+                    Sum_Fb_chet.Answer();
+                    break;
+
 
                 default:
                     Console.WriteLine("You enter uknown command");

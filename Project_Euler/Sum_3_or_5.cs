@@ -47,10 +47,7 @@ namespace Project_Euler
             {
                 return (true);
             }
-            else
-            {
-                return (false);
-            }
+            else return (false);
         }
         static bool Division_by_3(int x) // determination of division by 3
         {
@@ -58,10 +55,7 @@ namespace Project_Euler
             {
                 return (true);
             }
-            else
-            {
-                return (false);
-            }
+            else return (false);           
         }
 
         static int Sum_of_numders(int x) // the sum of the digits of the number
