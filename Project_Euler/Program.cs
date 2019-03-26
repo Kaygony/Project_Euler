@@ -10,9 +10,11 @@ namespace Project_Euler
     {
         public static void Main()
         {
+            Console.Clear();
             Console.WriteLine("Project Euler:");
             Console.WriteLine("1. The sum of all numbers less than 1000 that are multiples of 3 or 5");
             Console.WriteLine("2. The sum of all even elements of the Fibonacci series, which do not exceed 4 million ");
+            Console.WriteLine("3. The largest divisor of 600851475143, which is a prime number ");
 
 
             string selection = Console.ReadLine();
@@ -24,6 +26,10 @@ namespace Project_Euler
 
                 case "2":
                     Sum_Fb_chet.Answer();
+                    break;
+
+                case "3":
+                    Greatest_divider.Answer();
                     break;
 
 

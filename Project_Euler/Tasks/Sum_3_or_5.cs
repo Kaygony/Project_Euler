@@ -11,6 +11,7 @@ namespace Project_Euler
 
         public static void Answer() // The sum of all numbers less than 1000 that are multiples of 3 or 5
         {
+            Console.Clear();
             Console.WriteLine(" The sum of all numbers less than 1000 that are multiples of 3 or 5 :");
 
             int[] nums = new int[1000];

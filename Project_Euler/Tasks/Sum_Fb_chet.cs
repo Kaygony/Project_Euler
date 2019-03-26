@@ -10,24 +10,27 @@ namespace Project_Euler
     {
         public static void Answer()
         {
+            Console.Clear();
             Console.WriteLine(" The sum of all even elements of the Fibonacci series, which do not exceed 4 million:");
 
-
-            Console.WriteLine("начальный массив");
-            int[] x = new int[100];
-            for(int i=0; i<100; i++)
-            {
-                Console.WriteLine(x[i]);
-            }
-            
-
+            int sum = 0;
+            int[] x = new int[40];
+        
             Fibonachi(x);
-            Console.WriteLine("фибоначи массив");
-            for (int i = 0; i < 100; i++)
+
+            Console.WriteLine("Fibonacci series");
+            for (int i = 0; i < 40; i++)
             {
-                Console.WriteLine(x[i]);
+                if(x[i] < 4000000 && x[i] != 0 && Chet(x[i])==true)
+                {
+                    Console.WriteLine(x[i]);
+                    sum += x[i];
+                }
+                
             }
 
+            Console.Write("The sum of all even elements of the Fibonacci series: ");
+            Console.WriteLine(sum);
 
             Console.WriteLine("Press 1 to return ");
             string selection = Console.ReadLine();
@@ -54,7 +57,6 @@ namespace Project_Euler
             while (x[i] < 4000000)   
             {
                 x[i + 2] = x[i] + x[i + 1];
-                Console.WriteLine(x[i + 2]);
                 i++;
             }
         }
