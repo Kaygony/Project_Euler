@@ -13,14 +13,10 @@ namespace Project_Euler
             Console.Clear();
             Console.WriteLine(" The largest divisor of 600851475143, which is a prime number :");
 
-            int[] x = new int[100000];
+            
             long n = 600851475143;
 
-            Sieve(x,n);
-            for(int i=0; i<1000;i++)
-            {
-                Console.WriteLine(x[i]);
-            }
+            Sieve(n);
             
 
             Console.WriteLine("Press 1 to return ");
@@ -38,9 +34,12 @@ namespace Project_Euler
             }
         }
 
-        static void Sieve(int[] x, long n) // sieve of Eratosthenes
+        static void Sieve(long n) // sieve of Eratosthenes
         {
+            long[] x = new long[n];
+
             x[0] = 0;
+
             for (int k = 1; k <= n; k++)
                 x[k] = 1;
 
