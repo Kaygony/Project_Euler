@@ -18,8 +18,6 @@ namespace Project_Euler
 
             PolydromChek(x);
 
-            
-
 
             Console.WriteLine("/n Press 1 to return ");
             string selection = Console.ReadLine();
@@ -40,7 +38,7 @@ namespace Project_Euler
         {
             int y = 0;
 
-            int[] d = new int[6];
+            int[] d = new int[7];
             d[0] = 1;
 
             int[] p = new int[6];
@@ -49,16 +47,33 @@ namespace Project_Euler
             {
                 p[i] = x % (d[i] * 10);
                 x -= p[i];
-                Console.WriteLine($" p = {p[i]}");
+                
                 d[i+1] = d[i] * 10;
-            }
 
+                p[i] = p[i] / d[i];
+
+                Console.WriteLine($" p = {p[i]}");
+
+            }
+            Console.WriteLine(" ");
+
+            for (int i = 0; i < 6; i++)
+            {
+                int j = 6;
+                p[i] = p[i] * d[j];
+                j--;
+
+                Console.WriteLine($" pр = {p[i]}");
+            }
+            Console.WriteLine(" ");
 
             for (int i = 0; i < 6; i++)
             {
                 y += p[i];
-                
+                Console.WriteLine($" d = {d[i]}");
             }
+            Console.WriteLine(" ");
+
             Console.WriteLine($" y = {y}");
         }
     }
