@@ -13,11 +13,32 @@ namespace Project_Euler
             Console.Clear();
             Console.WriteLine(" The largest palindrome obtained by multiplying two three-digit numbers :");
 
-            Console.WriteLine("enter digit");
-            int x = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[1000];
+            int[] b = new int[1000];
+            int m = 0;
 
-            PolydromChek(x);
+            for(int i = 0; i<1000; i++)
+            {
+                a[i] = i;
+                b[i] = i;          
+            }
 
+            for (int i = 0; i < 1000; i++)
+            {
+                for(int j = 0; j<1000; j++)
+                {
+                    /* if((PolydromChek(a[i] * b[j]) == true) && ((a[i] * b[j])>m))
+                     {
+                         m = a[i] * b[j];
+                         Console.WriteLine($"m = {m}");
+                     } */
+                    PolydromChek(a[i] * b[j]);
+                    Console.WriteLine($"a[i] * b[j] = {a[i] * b[j]}");
+                }
+                
+            }
+
+            Console.WriteLine($"Answer: {m}");
 
             Console.WriteLine("/n Press 1 to return ");
             string selection = Console.ReadLine();
@@ -52,29 +73,34 @@ namespace Project_Euler
 
                 p[i] = p[i] / d[i];
 
-                Console.WriteLine($" p = {p[i]}");
-
             }
-            Console.WriteLine(" ");
 
+            int j = 5;
             for (int i = 0; i < 6; i++)
             {
-                int j = 6;
                 p[i] = p[i] * d[j];
                 j--;
 
-                Console.WriteLine($" pр = {p[i]}");
             }
-            Console.WriteLine(" ");
 
             for (int i = 0; i < 6; i++)
             {
                 y += p[i];
-                Console.WriteLine($" d = {d[i]}");
             }
-            Console.WriteLine(" ");
 
-            Console.WriteLine($" y = {y}");
+            if (x == y)
+            {
+                //return (true);
+                Console.WriteLine(true);
+            }
+            else
+            {
+                //return (false);
+                Console.WriteLine(false);
+            }
+                
         }
+
+
     }
 }
