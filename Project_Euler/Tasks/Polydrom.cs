@@ -23,17 +23,17 @@ namespace Project_Euler
                 b[i] = i;          
             }
 
-            for (int i = 0; i < 1000; i++)
+            for (int i = 100; i < 1000; i++)
             {
-                for(int j = 0; j<1000; j++)
+                for(int j = 100; j<1000; j++)
                 {
-                    /* if((PolydromChek(a[i] * b[j]) == true) && ((a[i] * b[j])>m))
+                     if((PolydromChek(a[i] * b[j]) == true) && ((a[i] * b[j])>m))
                      {
                          m = a[i] * b[j];
                          Console.WriteLine($"m = {m}");
-                     } */
-                    PolydromChek(a[i] * b[j]);
-                    Console.WriteLine($"a[i] * b[j] = {a[i] * b[j]}");
+                     }  
+
+                    
                 }
                 
             }
@@ -55,7 +55,7 @@ namespace Project_Euler
             }
         }
 
-        static void PolydromChek(int x)
+        static bool PolydromChek(int x)
         {
             int y = 0;
 
@@ -90,13 +90,11 @@ namespace Project_Euler
 
             if (x == y)
             {
-                //return (true);
-                Console.WriteLine(true);
+                return (true);
             }
             else
             {
-                //return (false);
-                Console.WriteLine(false);
+               return (false); 
             }
                 
         }

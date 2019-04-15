@@ -16,6 +16,7 @@ namespace Project_Euler
             Console.WriteLine("2. The sum of all even elements of the Fibonacci series, which do not exceed 4 million ");
             Console.WriteLine("3. The largest divisor of 600851475143, which is a prime number ");
             Console.WriteLine("4. The largest palindrome obtained by multiplying two three-digit numbers ");
+            Console.WriteLine("5. The smallest number divisible by all numbers from 1 to 20 ");
 
 
             string selection = Console.ReadLine();
@@ -35,6 +36,10 @@ namespace Project_Euler
 
                 case "4":
                     Polydrom.Answer();
+                    break;
+
+                case "5":
+                    SmallNum1_20.Answer();
                     break;
 
 
