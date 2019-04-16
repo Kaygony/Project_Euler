@@ -30,7 +30,6 @@ namespace Project_Euler
                      if((PolydromChek(a[i] * b[j]) == true) && ((a[i] * b[j])>m))
                      {
                          m = a[i] * b[j];
-                         Console.WriteLine($"m = {m}");
                      }  
 
                     
@@ -57,6 +56,7 @@ namespace Project_Euler
 
         static bool PolydromChek(int x)
         {
+            int rez = x;
             int y = 0;
 
             int[] d = new int[7];
@@ -73,28 +73,36 @@ namespace Project_Euler
 
                 p[i] = p[i] / d[i];
 
-            }
+               // Console.WriteLine($"p[{i}] = {p[i]}");
 
+            }
+            x = rez;
+
+           // Console.WriteLine("");
             int j = 5;
             for (int i = 0; i < 6; i++)
             {
                 p[i] = p[i] * d[j];
                 j--;
-
+               // Console.WriteLine($"p[{i}] = {p[i]}");
             }
-
+        //    Console.WriteLine("");
             for (int i = 0; i < 6; i++)
             {
                 y += p[i];
+                
             }
+          //  Console.WriteLine($"y = {y}");
 
             if (x == y)
             {
                 return (true);
+                
             }
             else
             {
-               return (false); 
+                 return (false); 
+                
             }
                 
         }
